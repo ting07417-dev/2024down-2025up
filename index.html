@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D气球展示</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="intro-text">ARE YOU READY?</div>
+        <div class="balloon-container">
+            <div class="balloon" id="balloon1">
+                <div class="balloon-content">1</div>
+            </div>
+            <div class="balloon" id="balloon2">
+                <div class="balloon-content">2</div>
+            </div>
+            <div class="balloon" id="balloon3">
+                <div class="balloon-content">3</div>
+            </div>
+        </div>
+        
+        <div class="image-container">
+            <div class="image-wrapper" id="image1">
+                <img src="images/image1.jpg" alt="图片1">
+            </div>
+            <div class="image-wrapper" id="image2">
+                <img src="images/image2.jpg" alt="图片2">
+            </div>
+            <div class="image-wrapper" id="image3">
+                <img src="images/image3.jpg" alt="图片3">
+            </div>
+        </div>
+    </div>
+
+    <div class="calligraphy-page">
+        <div class="paper-texture"></div>
+        <div class="border-images">
+            <div class="border-image top-left">
+                <img src="images/border1.jpg" alt="边框图片1" class="zoomable-image">
+            </div>
+            <div class="border-image top-right">
+                <img src="images/border2.jpg" alt="边框图片2" class="zoomable-image">
+            </div>
+            <div class="border-image bottom-left">
+                <img src="images/border3.jpg" alt="边框图片3" class="zoomable-image">
+            </div>
+            <div class="border-image bottom-right">
+                <img src="images/border4.jpg" alt="边框图片4" class="zoomable-image">
+            </div>
+        </div>
+        <div class="long-image-container">
+            <div class="long-image">
+                <img src="images/long-image.jpg" alt="长图">
+            </div>
+        </div>
+        <div class="calligraphy-content">
+            <h1 class="calligraphy-title">临时起意</h1>
+            <div class="calligraphy-text">
+                <p>作画三幅</p>
+            </div>
+            <div class="calligraphy-images">
+                <div class="calligraphy-image-wrapper">
+                    <img src="images/calligraphy1.jpg" alt="书法图片1" class="zoomable-image">
+                </div>
+                <div class="calligraphy-image-wrapper">
+                    <img src="images/calligraphy2.jpg" alt="书法图片2" class="zoomable-image">
+                </div>
+                <div class="calligraphy-image-wrapper">
+                    <img src="images/calligraphy3.jpg" alt="书法图片3" class="zoomable-image">
+                </div>
+            </div>
+        </div>
+        <button class="switch-button">切换视图1</button>
+    </div>
+
+    <div class="second-view">
+        <div class="second-images">
+            <div class="second-image-wrapper">
+                <img src="images/second1.jpg" alt="第二视图图片1">
+            </div>
+            <div class="second-image-wrapper">
+                <img src="images/second2.jpg" alt="第二视图图片2">
+            </div>
+            <div class="second-image-wrapper">
+                <img src="images/second3.jpg" alt="第二视图图片3">
+            </div>
+            <div class="second-image-wrapper">
+                <img src="images/second4.jpg" alt="第二视图图片4">
+            </div>
+        </div>
+        <div class="side-images">
+            <div class="left-image">
+                <img src="images/left-image.jpg" alt="左侧图片">
+            </div>
+            <div class="right-images">
+                <div class="right-image">
+                    <img src="images/right1.jpg" alt="右侧图片1">
+                </div>
+                <div class="right-image">
+                    <img src="images/right2.jpg" alt="右侧图片2">
+                </div>
+            </div>
+        </div>
+        <button class="switch-button view2-button">切换视图2</button>
+        <button class="plane-button">
+            <svg viewBox="0 0 24 24" class="plane-icon">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="third-view">
+        <div class="drawer-container">
+            <div class="drawer-handle" id="drawerHandle">
+                <div class="handle-line"></div>
+            </div>
+            <div class="drawer-content">
+                <div class="drawer-header">
+                    <h2>一些类似</h2>
+                    <div class="drawer-decoration"></div>
+                </div>
+                <div class="drawer-images">
+                    <div class="drawer-image-wrapper">
+                        <img src="images/third1.jpg" alt="清晨北京" class="zoomable-image">
+                    </div>
+                    <div class="drawer-image-wrapper">
+                        <img src="images/third2.jpg" alt="胡同生活" class="zoomable-image">
+                    </div>
+                    <div class="drawer-image-wrapper">
+                        <img src="images/third3.jpg" alt="长安街夜景" class="zoomable-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="switch-button back-button">返回</button>
+    </div>
+
+    <div class="fourth-view">
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <h2 class="gallery-title">光影记忆</h2>
+                <div class="gallery-subtitle">MOMENTS</div>
+            </div>
+            <button class="plane-button gallery-plane">
+                <svg viewBox="0 0 24 24" class="plane-icon">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+            <button class="train-button gallery-train">
+                <svg viewBox="0 0 24 24" class="train-icon">
+                    <path d="M12 2c-4.42 0-8 .5-8 4v10c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4zm5.66 2.99H6.34C6.89 4.46 8.31 4 12 4s5.11.46 5.66.99zm.34 2V10H6V6.99h12zm-.34 9.74l-.29.27H6.63l-.29-.27C6.21 16.62 6 16.37 6 16v-4h12v4c0 .37-.21.62-.34.73z"/>
+                    <circle cx="8.5" cy="14.5" r="1.5"/>
+                    <circle cx="15.5" cy="14.5" r="1.5"/>
+                </svg>
+            </button>
+            <button class="gallery-bridge">
+                <svg class="bridge-icon" viewBox="0 0 24 24">
+                    <path d="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8zM12,6c-3.31,0 -6,2.69 -6,6s2.69,6 6,6 6,-2.69 6,-6 -2.69,-6 -6,-6zM12,16c-2.21,0 -4,-1.79 -4,-4s1.79,-4 4,-4 4,1.79 4,4 -1.79,4 -4,4z"/>
+                </svg>
+            </button>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="item-content">
+                        <img src="images/gallery1.jpg" alt="图片1" class="zoomable-image">
+                        <div class="item-overlay">
+                            <div class="item-title">乡村</div>
+                            <div class="item-description">傍晚的水稻</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="item-content">
+                        <img src="images/gallery2.jpg" alt="图片2" class="zoomable-image">
+                        <div class="item-overlay">
+                            <div class="item-title">移动</div>
+                            <div class="item-description">动态的晚霞</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="item-content">
+                        <img src="images/gallery3.jpg" alt="图片3" class="zoomable-image">
+                        <div class="item-overlay">
+                            <div class="item-title">星空</div>
+                            <div class="item-description">煎熬的夜拍</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="item-content">
+                        <img src="images/gallery4.jpg" alt="图片4" class="zoomable-image">
+                        <div class="item-overlay">
+                            <div class="item-title">夕阳</div>
+                            <div class="item-description">熙攘的顾客</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="back-button gallery-back">返回</button>
+    </div>
+
+    <div class="gallery-letter-modal">
+        <div class="gallery-letter-content">
+            <div class="gallery-letter-paper">
+                <div class="gallery-letter-header">
+                    <h2>生活中的小美好</h2>
+                </div>
+                <div class="gallery-letter-body">
+                    <p>在忙碌的生活中，我们常常忽略了身边的美好。</p>
+                    <p>清晨的阳光透过窗帘，</p>
+                    <p>午后的微风轻抚脸庞，</p>
+                    <p>傍晚的晚霞染红天际，</p>
+                    <p>夜晚的星空点缀夜空。</p>
+                    <p>这些都是生活赠予我们的礼物，</p>
+                    <p>让我们停下脚步，</p>
+                    <p>感受这些美好的瞬间。</p>
+                </div>
+                <div class="gallery-letter-footer">
+                    <p>2025.6.14</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="" alt="原图" class="modal-image">
+        </div>
+    </div>
+
+    <div class="letter-modal">
+        <div class="letter-content">
+            <div class="letter-paper">
+                <div class="letter-header">
+                    <h2>Bei Jing !</h2>
+                </div>
+                <div class="letter-body">
+                    <p>哈哈哈，没想到我真的一个人去了北京。</p>
+                    <p>2025年5月14号的晚上，一个人坐到汉口站，虽然当时换乘走上了楼梯。</p>
+                    <p>出发之前特别担心手机没电，也很担心高铁不安全，座位是车厢式的，会很尴尬，但一切不是这样"的，好神奇的感觉。</p>
+                    <p>旁边座位一直都是阿姨，感觉很亲切，第二位阿姨看着很高冷，但人还是挺热情的，印象特别深的是她对我是大学生的惊讶。</p>
+                    <p>在一趟列车上，听到各种各样的方言真的很有趣，最迷人的可能还是京腔吧，感觉周边的很多人都是比较有见识的，有点后悔的是没和回来路上的叔叔聊聊，感觉是位大佬。</p>
+                    <p>北京的地铁换乘的路线还长呀，有点地铁看着确实有点年代感，四惠地铁站竟然是在一个居民楼里，地铁里面还可以看到地面。</p>
+                    <p>大望路地铁里看着旧旧的，出来却是大楼，大家看起来就很城里人，国贸地铁站附近高楼大厦，有点压迫感，马路都不敢过，不过好像有的人都不看红绿灯。</p>
+                    <p>到晋麦香的时候，都不知道怎么过马路，嘿嘿嘿，打开门帘的时候，有点不真实，人有点懵，选了个位置坐下，去点菜，"千玺同款"，迟迟说不出口，等面到了的时候，眼睛里真的都是泪花，吃不下去。</p>
+                    <p>从通惠河步行至小滑梯的时候，看到了北京电视台，cbd公园，外卖小哥，有种错乱的感觉，北京也是这样的。</p>
+                    <p>到小滑梯那里，特别想滑，但人有点多，不好意思滑，就在那里坐了一下午，不过确实凉快。</p>
+                    <p>希望下一次去北京，能体会到历史版的北京。</p>
+                </div>
+                <div class="letter-footer">
+                    <p>2025.5.14</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fifth-view">
+        <div class="memory-container">
+            <div class="memory-header">
+                <h2 class="memory-title">记忆碎片</h2>
+                <div class="memory-subtitle">MEMORIES</div>
+            </div>
+            <div class="memory-grid">
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory1.jpg" alt="记忆1" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">清晨</div>
+                            <div class="memory-description">第一缕阳光</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory2.jpg" alt="记忆2" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">午后</div>
+                            <div class="memory-description">温暖的时光</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory3.jpg" alt="记忆3" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">傍晚</div>
+                            <div class="memory-description">夕阳西下</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory4.jpg" alt="记忆4" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">夜晚</div>
+                            <div class="memory-description">星空璀璨</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory5.jpg" alt="记忆5" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">城市</div>
+                            <div class="memory-description">繁华街景</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory6.jpg" alt="记忆6" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">小巷</div>
+                            <div class="memory-description">市井生活</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory7.jpg" alt="记忆7" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">公园</div>
+                            <div class="memory-description">绿意盎然</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory8.jpg" alt="记忆8" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">建筑</div>
+                            <div class="memory-description">历史印记</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory9.jpg" alt="记忆9" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">美食</div>
+                            <div class="memory-description">舌尖记忆</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory10.jpg" alt="记忆10" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">人文</div>
+                            <div class="memory-description">市井百态</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory11.jpg" alt="记忆11" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">风景</div>
+                            <div class="memory-description">自然之美</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory12.jpg" alt="记忆12" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">街角</div>
+                            <div class="memory-description">城市细节</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory13.jpg" alt="记忆13" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">夜色</div>
+                            <div class="memory-description">霓虹闪烁</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-content">
+                        <img src="images/memory14.jpg" alt="记忆14" class="zoomable-image">
+                        <div class="memory-overlay">
+                            <div class="memory-title">瞬间</div>
+                            <div class="memory-description">永恒定格</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="back-button memory-back">返回</button>
+    </div>
+
+    <div class="polaroid-view">
+        <div class="polaroid-container">
+            <div class="polaroid-grid">
+                <div class="polaroid-item" style="--rotation: -2deg;">
+                    <img src="images/memory1.jpg" alt="Memory 1">
+                    <div class="polaroid-caption">记忆碎片 1</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: 1deg;">
+                    <img src="images/memory2.jpg" alt="Memory 2">
+                    <div class="polaroid-caption">记忆碎片 2</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: -1deg;">
+                    <img src="images/memory3.jpg" alt="Memory 3">
+                    <div class="polaroid-caption">记忆碎片 3</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: 2deg;">
+                    <img src="images/memory4.jpg" alt="Memory 4">
+                    <div class="polaroid-caption">记忆碎片 4</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: -2deg;">
+                    <img src="images/memory5.jpg" alt="Memory 5">
+                    <div class="polaroid-caption">记忆碎片 5</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: 1deg;">
+                    <img src="images/memory6.jpg" alt="Memory 6">
+                    <div class="polaroid-caption">记忆碎片 6</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: -1deg;">
+                    <img src="images/memory7.jpg" alt="Memory 7">
+                    <div class="polaroid-caption">记忆碎片 7</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: 2deg;">
+                    <img src="images/memory8.jpg" alt="Memory 8">
+                    <div class="polaroid-caption">记忆碎片 8</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: -2deg;">
+                    <img src="images/memory9.jpg" alt="Memory 9">
+                    <div class="polaroid-caption">记忆碎片 9</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: 1deg;">
+                    <img src="images/memory10.jpg" alt="Memory 10">
+                    <div class="polaroid-caption">记忆碎片 10</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: -1deg;">
+                    <img src="images/memory11.jpg" alt="Memory 11">
+                    <div class="polaroid-caption">记忆碎片 11</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: 2deg;">
+                    <img src="images/memory12.jpg" alt="Memory 12">
+                    <div class="polaroid-caption">记忆碎片 12</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: -2deg;">
+                    <img src="images/memory13.jpg" alt="Memory 13">
+                    <div class="polaroid-caption">记忆碎片 13</div>
+                </div>
+                <div class="polaroid-item" style="--rotation: 1deg;">
+                    <img src="images/memory14.jpg" alt="Memory 14">
+                    <div class="polaroid-caption">记忆碎片 14</div>
+                </div>
+            </div>
+            <button class="polaroid-back">返回</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
